@@ -7,12 +7,14 @@ import InfoBox from "./subComponents/InfoBox";
 import { Link } from "react-router-dom";
 import Slider from "./Slider";
 import Footer from "./footer/Footer";
-
-// import Button from "./subComponents/Button";
 import FAQ from "./FAQ";
+import Navbar from "./Navbar"; // ✅ Import Navbar
+
 const Home = () => {
     return (
         <div className="relative">
+            <Navbar /> {/* ✅ Add Navbar at the top */}
+
             <Hero />
 
             <section className="w-[100vw]">
@@ -36,16 +38,18 @@ const Home = () => {
                         infoTitle={"Download and send to employers"}
                         infoDesc={"Save and send as a PDF, Word DOC or any other file format the employer wants."}
                     />
-
                 </div>
 
                 <div className="my-16 text-center">
                     <Link to={"/editor"} className="m-auto inline-block min-w-[280px] h-fit py-4 px-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg font-bold text-xl text-white hover:to-orange-400">
-                        Make a resume</Link>
+                        Make a resume
+                    </Link>
                 </div>
+
                 <div className="my-16 text-center">
                     <Link to={"/ATSCHECKER"} className="m-auto inline-block min-w-[280px] h-fit py-4 px-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg font-bold text-xl text-white hover:to-orange-400">
-                        CHECK ATS SCORE</Link>
+                        CHECK ATS SCORE
+                    </Link>
                 </div>
             </section>
 
@@ -56,19 +60,18 @@ const Home = () => {
                 <Slider />
             </section>
 
-
             <section>
                 <div className="w-[100vw] flex items-center justify-center
         font-bold flex-wrap-reverse gap-10 p-[25px]">
                     <div className="leading-8 max-w-[600px] min-w-[300px] max-sm:text-center">
-                        <p className="font-semibold text-orange-500">SECURE YOUR DREAM JOB
-                        </p>
+                        <p className="font-semibold text-orange-500">SECURE YOUR DREAM JOB</p>
                         <h1 className="text-3xl lg:text-5xl my-5 leading-[3rem]">
                             Create a professional story in minutes. Use our cover letter maker.
                         </h1>
                         <p className="my-5 p-2">
                             Our Resume maker allows you to write amazing professional pitches in minutes rather than hours.
-                            No more writer’s block, no more searching for the convincing phrases or agonizing over formatting. Be persuasive without effort!                            <br />
+                            No more writer’s block, no more searching for the convincing phrases or agonizing over formatting.
+                            Be persuasive without effort!
                         </p>
                         <Link to={"/editor"} >
                             <button type="button"
@@ -78,7 +81,6 @@ const Home = () => {
                                 Get Started Now
                             </button>
                         </Link>
-
                     </div>
                     <div className="select-none max-w-[700px] min-w-[300px]">
                         <img src={img3} alt="" width={"100%"} height={"100%"} />
@@ -88,13 +90,13 @@ const Home = () => {
 
             <section className="my-10 p-5 mx-auto md:w-[85%]">
                 <h1 className="text-3xl lg:text-5xl leading-[3rem] text-center my-5 font-bold ">
-                    FAQs </h1>
+                    FAQs
+                </h1>
                 <FAQ />
             </section>
 
-            <Footer/>
-        </div >
-
+            <Footer />
+        </div>
     );
 }
 
