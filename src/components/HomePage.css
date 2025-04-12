@@ -1,0 +1,131 @@
+/* Ensure no margin or padding issues */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.homepage-container {
+    background-image: url('/HomeImage.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+/* HEADER FIX - Ensure it's at the very top */
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    color: white;
+    padding: 20px 0;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+}
+
+/* Left content shifted even more to the left */
+.left-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    max-width: 38%;
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.left-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #ffeb3b;
+}
+
+.left-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Right content without box and buttons side by side */
+.right-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for Login and Register buttons */
+.right-content button {
+    padding: 15px 50px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+}
+
+/* Individual button styles */
+.sign-in {
+    background-color: #007bff;
+}
+
+.sign-up {
+    background-color: #00bcd4;
+}
+
+/* Hover effects */
+.sign-in:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 86, 179, 0.6);
+}
+
+.sign-up:hover {
+    transform: scale(1.1);
+    background-color: #008ba3;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+        padding: 15px 0;
+    }
+
+    .left-content {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .right-content {
+        flex-direction: column;
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .right-content button {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
